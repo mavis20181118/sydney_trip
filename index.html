@@ -1,4 +1,4 @@
-<Sydney html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
@@ -59,18 +59,22 @@
             margin-bottom: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             border: 1px solid var(--border-color);
+            overflow: hidden; /* 防止內容溢出圓角 */
         }
 
-        /* 將兩行合併到同一個網格系統中 */
+        /* 班機網格系統 (含手機版防溢出滑動設計) */
         .flight-schedule {
             display: grid;
-            grid-template-columns: max-content max-content max-content max-content max-content max-content max-content auto;
-            column-gap: 8px; /* 直欄間距 */
-            row-gap: 6px;    /* 橫列間距 */
+            grid-template-columns: max-content max-content max-content max-content max-content max-content max-content max-content;
+            column-gap: 8px;
+            row-gap: 6px;    
             align-items: center;
             font-size: 13.5px;
             color: var(--text-main);
             margin-top: 10px;
+            overflow-x: auto; /* 手機版太窄時允許水平滑動 */
+            white-space: nowrap;
+            padding-bottom: 4px; 
         }
 
         .flight-arrow {
@@ -137,6 +141,7 @@
             font-weight: 500;
             margin-left: 10px;
             white-space: nowrap;
+            margin-bottom: 4px; /* 手機版換行時的安全間距 */
         }
 
         .tag.morning { background: var(--tag-morning); color: var(--tag-morning-text); }
@@ -170,6 +175,16 @@
         .event-card.evening-border { border-left-color: #ba68c8; }
         .event-card.transit-border { border-left-color: #4db6ac; }
 
+        /* 手機版專屬微調 */
+        @media (max-width: 480px) {
+            body { padding: 15px; }
+            .flight-schedule {
+                font-size: 12px; /* 手機版字體微縮 */
+                column-gap: 5px;
+            }
+            .flight-note { font-size: 11px; }
+            .event-title { font-size: 15px; }
+        }
     </style>
 </head>
 <body>
