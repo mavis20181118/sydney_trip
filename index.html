@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sydney Trip 09/25–09/28 (Map Version)</title>
+    <style>
+        :root {
+            --primary-bg: #f5f5f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --accent-blue: #0066cc;
+            --tag-morning: #e3f2fd;
+            --tag-morning-text: #1976d2;
+            --tag-afternoon: #fff3e0;
+            --tag-afternoon-text: #f57c00;
+            --tag-evening: #ede7f6;
+            --tag-evening-text: #512da8;
+            --tag-transit: #e0f7fa;
+            --tag-transit-text: #00796b;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .header-info {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .header-info a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .hotel-box, .supermarket-box {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .supermarket-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .supermarket-item {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .supermarket-item a {
+            text-decoration: none;
+            margin-right: 5px;
+            font-size: 16px;
+        }
+
+        .day-section {
+            margin-bottom: 40px;
+        }
+
+        .day-header {
+            font-size: 20px;
+            font-weight: bold;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ccc;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .event-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--accent-blue);
+        }
+
+        .event-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .event-time {
+            font-weight: 600;
+            color: #d32f2f;
+            margin-right: 15px;
+            white-space: nowrap;
+        }
+
+        .event-title {
+            font-weight: bold;
+            font-size: 16px;
+            flex-grow: 1;
+        }
+
+        .event-title a {
+            text-decoration: none;
+        }
+
+        .tag {
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-left: 10px;
+            white-space: nowrap;
+        }
+
+        .tag.morning { background: var(--tag-morning); color: var(--tag-morning-text); }
+        .tag.afternoon { background: var(--tag-afternoon); color: var(--tag-afternoon-text); }
+        .tag.evening { background: var(--tag-evening); color: var(--tag-evening-text); }
+        .tag.transit { background: var(--tag-transit); color: var(--tag-transit-text); }
+
+        .event-details {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+        
+        .footer-note {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--border-color);
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px dashed #ccc;
+            margin: 30px 0;
+        }
+        
+        /* Tag color adjustments based on London Trip site */
+        .event-card.morning-border { border-left-color: #64b5f6; }
+        .event-card.afternoon-border { border-left-color: #ffb74d; }
+        .event-card.evening-border { border-left-color: #ba68c8; }
+        .event-card.transit-border { border-left-color: #4db6ac; }
+
+    </style>
+</head>
+<body>
+
+    <h1>Sydney Trip (Map Version)</h1>
+    <div class="header-info">
+        2026/09/25–09/28 • Room - Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a>
+    </div>
+
+    <div class="supermarket-box">
+        <strong>附近超市 & 購物</strong>
+        <div class="supermarket-grid">
+            <div class="supermarket-item"><a href="https://www.google.com/maps/search/Woolworths+Metro+Wynyard">🛒</a> Woolworths Metro</div>
+            <div class="supermarket-item"><a href="https://www.google.com/maps/search/Coles+Wynyard">🛒</a> Coles</div>
+        </div>
+    </div>
+
+    <!-- Day 1 -->
+    <div class="day-section">
+        <div class="day-header">## 09/25 (Fri)</div>
+
+        <div class="event-card transit-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">10:45–11:30</span>
+                    <span class="event-title">入境與前往住宿</span>
+                </div>
+                <span class="tag transit">Transit</span>
+            </div>
+            <div class="event-details">
+                入境、領行李，搭乘 T8 機場線（約 25 分）從 Sydney Airport <a href="https://www.google.com/maps/search/Sydney+Airport+Station">🚇</a> 至 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a>，出站後步行約 2 分鐘抵達住宿 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a>。
+            </div>
+        </div>
+
+        <div class="event-card afternoon-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">11:30–13:30</span>
+                    <span class="event-title">Check-in & Rest</span>
+                </div>
+                <span class="tag afternoon">Afternoon</span>
+            </div>
+            <div class="event-details">
+                辦理入住手續或寄放行李，於飯店短暫休息，洗去長途飛行的疲憊。
+            </div>
+        </div>
+
+        <div class="event-card afternoon-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">13:30–14:00</span>
+                    <span class="event-title">Wynyard → Queen Victoria Building (QVB)</span>
+                </div>
+                <span class="tag afternoon">Afternoon</span>
+            </div>
+            <div class="event-details">
+                自住宿往南步行約 5–8 分🚶抵達 Queen Victoria Building <a href="https://www.google.com/maps/search/Queen+Victoria+Building+Sydney">🛍️</a>。
+            </div>
+        </div>
+
+        <div class="event-card afternoon-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">14:00–15:30</span>
+                    <span class="event-title">Queen Victoria Building</span>
+                </div>
+                <span class="tag afternoon">Afternoon</span>
+            </div>
+            <div class="event-details">
+                於 QVB 欣賞精美的百年羅馬式建築並逛街。可於館內咖啡廳享用早午餐（推薦禽類或蔬食等無牛肉、無辣味的鹹食餐點）。
+            </div>
+        </div>
+
+        <div class="event-card afternoon-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">15:30–16:00</span>
+                    <span class="event-title">QVB → Hyde Park → St Mary's Cathedral</span>
+                </div>
+                <span class="tag afternoon">Afternoon</span>
+            </div>
+            <div class="event-details">
+                自 QVB 往東步行約 5 分🚶穿過 Hyde Park <a href="https://www.google.com/maps/search/Hyde+Park+Sydney">🌳</a>，抵達對街的 St Mary's Cathedral <a href="https://www.google.com/maps/search/St+Marys+Cathedral+Sydney">⛪</a>。
+            </div>
+        </div>
+
+        <div class="event-card afternoon-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">16:00–16:30</span>
+                    <span class="event-title">St Mary's Cathedral</span>
+                </div>
+                <span class="tag afternoon">Afternoon</span>
+            </div>
+            <div class="event-details">
+                入內參觀南半球最大的哥德式天主教堂。
+            </div>
+        </div>
+
+        <div class="event-card evening-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">16:30–17:00</span>
+                    <span class="event-title">St Mary's Cathedral → Wynyard</span>
+                </div>
+                <span class="tag evening">Evening</span>
+            </div>
+            <div class="event-details">
+                參觀完畢後，自鄰近的 St James Station <a href="https://www.google.com/maps/search/St+James+Station+Sydney">🚇</a> 搭乘火車返回 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a>。
+            </div>
+        </div>
+
+        <div class="event-card evening-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">17:00–18:00</span>
+                    <span class="event-title">超市採買 & 返回住宿</span>
+                </div>
+                <span class="tag evening">Evening</span>
+            </div>
+            <div class="event-details">
+                前往 Wynyard 車站共構或飯店旁的超市（如 Woolworths Metro 或 Coles）<a href="https://www.google.com/maps/search/Woolworths+Metro+Wynyard">🛒</a>，購買熟食、微波食品或水果作為晚餐，隨後步行回住宿。
+            </div>
+        </div>
+
+        <div class="event-card evening-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">18:00–Night</span>
+                    <span class="event-title">住宿休息</span>
+                </div>
+                <span class="tag evening">Evening</span>
+            </div>
+            <div class="event-details">
+                早點於 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 用餐與休息，為明天的行程養足體力。
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Day 2 -->
+    <div class="day-section">
+        <div class="day-header">## 09/26 (Sat)</div>
+
+        <div class="event-card morning-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">09:00–09:15</span>
+                    <span class="event-title">Wynyard → Circular Quay</span>
+                </div>
+                <span class="tag morning">Morning</span>
+            </div>
+            <div class="event-details">
+                步行 2 分鐘至 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a>，搭乘火車一站抵達 Circular Quay Station <a href="https://www.google.com/maps/search/Circular+Quay+Station+Sydney">🚇</a>。
+            </div>
+        </div>
+
+        <div class="event-card morning-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">09:15–11:30</span>
+                    <span class="event-title">Sydney Opera House</span>
+                </div>
+                <span class="tag morning">Morning</span>
+            </div>
+            <div class="event-details">
+                沿著碼頭東側步行至 Sydney Opera House <a href="https://www.google.com/maps/search/Sydney+Opera+House">🏛️</a>，拍攝建築外觀，並可參加預約的內部導覽。
+            </div>
+        </div>
+
+        <div class="event-card afternoon-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">11:30–12:30</span>
+                    <span class="event-title">Circular Quay Lunch</span>
+                </div>
+                <span class="tag afternoon">Afternoon</span>
+            </div>
+            <div class="event-details">
+                於環形碼頭東側周邊挑選餐廳享用午餐 <a href="https://www.google.com/maps/search/Circular+Quay+Restaurants">🍽️</a>。
+            </div>
+        </div>
+
+        <div class="event-card afternoon-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">12:30–13:00</span>
+                    <span class="event-title">Circular Quay → Art Gallery of NSW</span>
+                </div>
+                <span class="tag afternoon">Afternoon</span>
+            </div>
+            <div class="event-details">
+                自環形碼頭出發，穿越 Royal Botanic Garden <a href="https://www.google.com/maps/search/Royal+Botanic+Garden+Sydney">🌳</a> 的林蔭大道（不繞去海岬角），直達新南威爾斯美術館 <a href="https://www.google.com/maps/search/Art+Gallery+of+NSW+Sydney">🏛️</a>。
+            </div>
+        </div>
+
+        <div class="event-card afternoon-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">13:00–15:30</span>
+                    <span class="event-title">Art Gallery of NSW</span>
+                </div>
+                <span class="tag afternoon">Afternoon</span>
+            </div>
+            <div class="event-details">
+                參觀美術館南館的古典畫作與新建北館 (Sydney Modern Project) 的現代藝術區。
+            </div>
+        </div>
+
+        <div class="event-card evening-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">15:30–16:00</span>
+                    <span class="event-title">Art Gallery of NSW → Darling Harbour</span>
+                </div>
+                <span class="tag evening">Evening</span>
+            </div>
+            <div class="event-details">
+                自美術館步行至 St James Station <a href="https://www.google.com/maps/search/St+James+Station+Sydney">🚇</a> 搭乘火車至 Town Hall Station <a href="https://www.google.com/maps/search/Town+Hall+Station+Sydney">🚇</a>，出站後步行約 10 分🚶直達 Darling Harbour <a href="https://www.google.com/maps/search/Darling+Harbour+Sydney">🎡</a>。
+            </div>
+        </div>
+
+        <div class="event-card evening-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">16:00–19:00</span>
+                    <span class="event-title">Darling Harbour</span>
+                </div>
+                <span class="tag evening">Evening</span>
+            </div>
+            <div class="event-details">
+                抵達達令港後，於水岸周邊散步、逛街，感受週末熱鬧氛圍並等待夜晚的煙火。
+            </div>
+        </div>
+
+        <div class="event-card evening-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">19:00–21:00</span>
+                    <span class="event-title">Darling Harbour Dinner & Fireworks</span>
+                </div>
+                <span class="tag evening">Evening</span>
+            </div>
+            <div class="event-details">
+                挑選達令港畔的餐廳享用晚餐。約 20:30 或 21:00 於岸邊觀賞達令港週六限定煙火秀 <a href="https://www.google.com/maps/search/Darling+Harbour+Sydney">🎆</a>。觀賞完畢後步行約 10-15 分鐘🚶即可輕鬆返回 Wynyard 住宿。
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Day 3 -->
+    <div class="day-section">
+        <div class="day-header">## 09/27 (Sun)</div>
+
+        <div class="event-card morning-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">08:00–08:15</span>
+                    <span class="event-title">Wynyard → Central Station</span>
+                </div>
+                <span class="tag morning">Morning</span>
+            </div>
+            <div class="event-details">
+                步行至 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a> 搭乘火車至 Central Station <a href="https://www.google.com/maps/search/Central+Station+Sydney">🚇</a>。
+            </div>
+        </div>
+
+        <div class="event-card morning-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">08:24–10:25</span>
+                    <span class="event-title">Central Station → Katoomba (Blue Mountains)</span>
+                </div>
+                <span class="tag morning">Morning</span>
+            </div>
+            <div class="event-details">
+                搭乘 Blue Mountains Line 往 Katoomba Station <a href="https://www.google.com/maps/search/Katoomba+Station">🚇</a>（週日使用信用卡搭乘大眾運輸享有單日扣款上限優惠）。
+            </div>
+        </div>
+
+        <div class="event-card morning-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">10:25–10:45</span>
+                    <span class="event-title">Katoomba → Echo Point</span>
+                </div>
+                <span class="tag morning">Morning</span>
+            </div>
+            <div class="event-details">
+                出站後轉乘公車（686 路線）<a href="https://www.google.com/maps/search/Katoomba+Station">🚌</a> 前往 Echo Point 觀景台。
+            </div>
+        </div>
+
+        <div class="event-card morning-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">10:45–12:00</span>
+                    <span class="event-title">Echo Point & Three Sisters</span>
+                </div>
+                <span class="tag morning">Morning</span>
+            </div>
+            <div class="event-details">
+                欣賞著名的 Three Sisters（三姊妹岩）<a href="https://www.google.com/maps/search/Three+Sisters+Blue+Mountains">⛰️</a> 與壯麗的藍山峽谷自然景色。
+            </div>
+        </div>
+
+        <div class="event-card afternoon-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">12:00–13:00</span>
+                    <span class="event-title">Blue Mountains Lunch</span>
+                </div>
+                <span class="tag afternoon">Afternoon</span>
+            </div>
+            <div class="event-details">
+                於附近的景觀餐廳或回到 Katoomba 鎮上享用午餐 <a href="https://www.google.com/maps/search/Katoomba+Restaurants">🍽️</a>。
+            </div>
+        </div>
+
+        <div class="event-card afternoon-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">13:00–16:00</span>
+                    <span class="event-title">Scenic World</span>
+                </div>
+                <span class="tag afternoon">Afternoon</span>
+            </div>
+            <div class="event-details">
+                搭乘公車前往 Scenic World <a href="https://www.google.com/maps/search/Scenic+World+Blue+Mountains">🚠</a>，體驗全世界最陡的森林火車、高空纜車等設施。
+            </div>
+        </div>
+
+        <div class="event-card evening-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">16:00–18:00</span>
+                    <span class="event-title">Katoomba → Central Station → Wynyard</span>
+                </div>
+                <span class="tag evening">Evening</span>
+            </div>
+            <div class="event-details">
+                搭乘火車返回雪梨市區，並轉乘至 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a>。
+            </div>
+        </div>
+
+        <div class="event-card evening-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">18:00–19:30</span>
+                    <span class="event-title">晚餐 & 返回住宿</span>
+                </div>
+                <span class="tag evening">Evening</span>
+            </div>
+            <div class="event-details">
+                於飯店附近享用晚餐，結束一日的藍山國家公園行程，回住宿休息。
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Day 4 -->
+    <div class="day-section">
+        <div class="day-header">## 09/28 (Mon)</div>
+
+        <div class="event-card transit-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">03:45–05:00</span>
+                    <span class="event-title">住宿接駁 → Camden Valley Inn</span>
+                </div>
+                <span class="tag transit">Transit</span>
+            </div>
+            <div class="event-details">
+                於住宿 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 門口或指定地點搭乘熱氣球公司的專車接送，前往 Camden Valley Inn <a href="https://www.google.com/maps/search/Camden+Valley+Inn">🎈</a> 起飛場地（確切接駁時間依主辦單位前一日通知為準）。
+            </div>
+        </div>
+
+        <div class="event-card morning-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">05:00–09:00</span>
+                    <span class="event-title">Hot Air Balloon Flight & Breakfast</span>
+                </div>
+                <span class="tag morning">Morning</span>
+            </div>
+            <div class="event-details">
+                參與熱氣球飛行體驗，並於降落後在飯店享用慶祝早餐。
+            </div>
+        </div>
+
+        <div class="event-card transit-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">09:00–10:30</span>
+                    <span class="event-title">接駁回程 → Wynyard</span>
+                </div>
+                <span class="tag transit">Transit</span>
+            </div>
+            <div class="event-details">
+                搭乘熱氣球公司的回程接駁車，返回市區 Wynyard 站 <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a>。
+            </div>
+        </div>
+
+        <div class="event-card morning-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">10:30–12:00</span>
+                    <span class="event-title">The Rocks</span>
+                </div>
+                <span class="tag morning">Morning</span>
+            </div>
+            <div class="event-details">
+                自 Wynyard 步行前往岩石區 (The Rocks) <a href="https://www.google.com/maps/search/The+Rocks+Sydney">🏘️</a>，漫步於歷史悠久的砂岩建築與古鎮街道中。
+            </div>
+        </div>
+
+        <div class="event-card afternoon-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">12:00–14:30</span>
+                    <span class="event-title">Museum of Contemporary Art Australia (MCA)</span>
+                </div>
+                <span class="tag afternoon">Afternoon</span>
+            </div>
+            <div class="event-details">
+                步行前往澳洲當代藝術博物館 (MCA) <a href="https://www.google.com/maps/search/Museum+of+Contemporary+Art+Australia">🏛️</a>。可先於頂樓的 MCA Cafe 享用午餐 <a href="https://www.google.com/maps/search/MCA+Cafe+Sydney">🍽️</a>（有無牛肉與無辣味選項），再下樓參觀當代藝術作品。
+            </div>
+        </div>
+
+        <div class="event-card afternoon-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">14:30–16:30</span>
+                    <span class="event-title">Circular Quay 最後採買</span>
+                </div>
+                <span class="tag afternoon">Afternoon</span>
+            </div>
+            <div class="event-details">
+                於環形碼頭周邊及岩石區的小店進行最後的紀念品採買 <a href="https://www.google.com/maps/search/Circular+Quay">🛍️</a>。
+            </div>
+        </div>
+
+        <div class="event-card evening-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">16:30–17:30</span>
+                    <span class="event-title">返回住宿拿行李</span>
+                </div>
+                <span class="tag evening">Evening</span>
+            </div>
+            <div class="event-details">
+                自環形碼頭往南步行或搭乘輕軌回到 Little National Hotel Sydney 領取行李。
+            </div>
+        </div>
+
+        <div class="event-card evening-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">17:30–18:00</span>
+                    <span class="event-title">Wynyard → Sydney Airport (SYD)</span>
+                </div>
+                <span class="tag evening">Evening</span>
+            </div>
+            <div class="event-details">
+                自 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a> 搭乘 T8 機場線（約 25 分）前往雪梨機場 <a href="https://www.google.com/maps/search/Sydney+Airport">🛫</a>。
+            </div>
+        </div>
+
+        <div class="event-card evening-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">18:00–22:10</span>
+                    <span class="event-title">Airport Check-in & Dinner</span>
+                </div>
+                <span class="tag evening">Evening</span>
+            </div>
+            <div class="event-details">
+                辦理退稅、托運與出境檢查，並於機場內享用晚餐與最後的免稅店採買。
+            </div>
+        </div>
+
+        <div class="event-card evening-border">
+            <div class="event-header">
+                <div>
+                    <span class="event-time">22:10</span>
+                    <span class="event-title">Flight: SYD → TPE</span>
+                </div>
+                <span class="tag evening">Evening</span>
+            </div>
+            <div class="event-details">
+                搭乘 22:10 班機離開雪梨，結束旅程。
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-note">
+        ※ 點擊各行程後方小圖示可打開 Google Maps；所有時間為預估，依實際班次與現場人潮彈性調整。
+    </div>
+
+</body>
+</html>
