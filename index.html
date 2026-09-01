@@ -59,20 +59,19 @@
             margin-bottom: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             border: 1px solid var(--border-color);
-            overflow: hidden; /* 防止內容溢出圓角 */
+            overflow: hidden;
         }
 
-        /* 班機網格系統 (含手機版防溢出滑動設計) */
         .flight-schedule {
             display: grid;
             grid-template-columns: max-content max-content max-content max-content max-content max-content max-content max-content;
             column-gap: 8px;
-            row-gap: 6px;    
+            row-gap: 6px;  
             align-items: center;
             font-size: 13.5px;
             color: var(--text-main);
             margin-top: 10px;
-            overflow-x: auto; /* 手機版太窄時允許水平滑動 */
+            overflow-x: auto;
             white-space: nowrap;
             padding-bottom: 4px; 
         }
@@ -141,7 +140,7 @@
             font-weight: 500;
             margin-left: 10px;
             white-space: nowrap;
-            margin-bottom: 4px; /* 手機版換行時的安全間距 */
+            margin-bottom: 4px;
         }
 
         .tag.morning { background: var(--tag-morning); color: var(--tag-morning-text); }
@@ -175,11 +174,10 @@
         .event-card.evening-border { border-left-color: #ba68c8; }
         .event-card.transit-border { border-left-color: #4db6ac; }
 
-        /* 手機版專屬微調 */
         @media (max-width: 480px) {
             body { padding: 15px; }
             .flight-schedule {
-                font-size: 12px; /* 手機版字體微縮 */
+                font-size: 12px;
                 column-gap: 5px;
             }
             .flight-note { font-size: 11px; }
@@ -218,482 +216,278 @@
         </div>
     </div>
 
+    <!-- 9/25 (Fri) 行程 -->
     <div class="day-section">
-        <div class="day-header">09/25 (Fri)</div>
-
+        <div class="day-header">09/25 (Fri) • 輕鬆抵達與市區探索</div>
+        
         <div class="event-card transit-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">10:45–11:30</span>
-                    <span class="event-title">入境與前往住宿</span>
-                </div>
+                <div><span class="event-time">10:45–11:30</span><span class="event-title">入境與前往住宿</span></div>
                 <span class="tag transit">Transit</span>
             </div>
-            <div class="event-details">
-                入境、領行李，搭乘 T8 機場線（約 25 分）從 Sydney Airport <a href="https://www.google.com/maps/search/Sydney+Airport+Station">🚇</a> 至 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a>，出站後步行約 2 分鐘抵達住宿 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a>。
-            </div>
+            <div class="event-details">入境、領行李，搭乘 T8 機場線（約 25 分鐘）從 Sydney Airport <a href="https://www.google.com/maps/search/Sydney+Airport+Station">🚇</a> 至 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a>，出站後步行約 2 分鐘抵達住宿 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a>。</div>
         </div>
-
+        
         <div class="event-card afternoon-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">11:30–13:30</span>
-                    <span class="event-title">Check-in & Rest</span>
-                </div>
+                <div><span class="event-time">11:30–13:30</span><span class="event-title">Check-in & Rest</span></div>
                 <span class="tag afternoon">Afternoon</span>
             </div>
-            <div class="event-details">
-                辦理入住手續或寄放行李，於飯店短暫休息，洗去長途飛行的疲憊。
-            </div>
+            <div class="event-details">辦理入住手續或寄放行李，於 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 短暫休息，洗去長途飛行的疲憊。</div>
         </div>
-
+        
+        <div class="event-card transit-border">
+            <div class="event-header">
+                <div><span class="event-time">13:30–14:00</span><span class="event-title">Wynyard → Queen Victoria Building (QVB)</span></div>
+                <span class="tag transit">Transit</span>
+            </div>
+            <div class="event-details">從 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 樓下的 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a> 搭乘輕軌（約 3 分鐘）前往 QVB 站 <a href="https://www.google.com/maps/search/Queen+Victoria+Building+Sydney">🚇</a>。</div>
+        </div>
+        
         <div class="event-card afternoon-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">13:30–14:00</span>
-                    <span class="event-title">Wynyard → Queen Victoria Building (QVB)</span>
-                </div>
+                <div><span class="event-time">14:00–17:00</span><span class="event-title">Queen Victoria Building & 市區漫步</span></div>
                 <span class="tag afternoon">Afternoon</span>
             </div>
-            <div class="event-details">
-                自住宿往南步行約 5–8 分🚶抵達 Queen Victoria Building <a href="https://www.google.com/maps/search/Queen+Victoria+Building+Sydney">🛍️</a>。
-            </div>
+            <div class="event-details">於 Queen Victoria Building <a href="https://www.google.com/maps/search/Queen+Victoria+Building+Sydney">🛍️</a> 欣賞精美的百年羅馬式建築並逛街。可在館內咖啡廳享用下午茶，感受第一天的悠閒步調。</div>
         </div>
-
-        <div class="event-card afternoon-border">
-            <div class="event-header">
-                <div>
-                    <span class="event-time">14:00–15:30</span>
-                    <span class="event-title">Queen Victoria Building</span>
-                </div>
-                <span class="tag afternoon">Afternoon</span>
-            </div>
-            <div class="event-details">
-                於 QVB 欣賞精美的百年羅馬式建築並逛街。可於館內咖啡廳享用早午餐。
-            </div>
-        </div>
-
-        <div class="event-card afternoon-border">
-            <div class="event-header">
-                <div>
-                    <span class="event-time">15:30–16:00</span>
-                    <span class="event-title">QVB → Hyde Park → St Mary's Cathedral</span>
-                </div>
-                <span class="tag afternoon">Afternoon</span>
-            </div>
-            <div class="event-details">
-                自 QVB 往東步行約 5 分🚶穿過 Hyde Park <a href="https://www.google.com/maps/search/Hyde+Park+Sydney">🌳</a>，抵達對街的 St Mary's Cathedral <a href="https://www.google.com/maps/search/St+Marys+Cathedral+Sydney">⛪</a>。
-            </div>
-        </div>
-
-        <div class="event-card afternoon-border">
-            <div class="event-header">
-                <div>
-                    <span class="event-time">16:00–16:30</span>
-                    <span class="event-title">St Mary's Cathedral</span>
-                </div>
-                <span class="tag afternoon">Afternoon</span>
-            </div>
-            <div class="event-details">
-                入內參觀南半球最大的哥德式天主教堂。
-            </div>
-        </div>
-
+        
         <div class="event-card evening-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">16:30–17:00</span>
-                    <span class="event-title">St Mary's Cathedral → Wynyard</span>
-                </div>
+                <div><span class="event-time">17:00–18:00</span><span class="event-title">超市採買 & 返回住宿</span></div>
                 <span class="tag evening">Evening</span>
             </div>
-            <div class="event-details">
-                參觀完畢後，自鄰近的 St James Station <a href="https://www.google.com/maps/search/St+James+Station+Sydney">🚇</a> 搭乘火車返回 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a>。
-            </div>
+            <div class="event-details">前往 Wynyard 車站共構的超市（Woolworths Metro 或 Coles）<a href="https://www.google.com/maps/search/Woolworths+Metro+Wynyard">🛒</a> 採買晚餐與備品，步行約 2 分鐘返回 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a>。</div>
         </div>
-
+        
         <div class="event-card evening-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">17:00–18:00</span>
-                    <span class="event-title">超市採買 & 返回住宿</span>
-                </div>
+                <div><span class="event-time">18:00–Night</span><span class="event-title">住宿休息</span></div>
                 <span class="tag evening">Evening</span>
             </div>
-            <div class="event-details">
-                前往 Wynyard 車站共構或飯店旁的超市（如 Woolworths Metro 或 Coles）<a href="https://www.google.com/maps/search/Woolworths+Metro+Wynyard">🛒</a>，購買熟食、微波食品或水果作為晚餐，隨後步行回住宿。
-            </div>
-        </div>
-
-        <div class="event-card evening-border">
-            <div class="event-header">
-                <div>
-                    <span class="event-time">18:00–Night</span>
-                    <span class="event-title">住宿休息</span>
-                </div>
-                <span class="tag evening">Evening</span>
-            </div>
-            <div class="event-details">
-                早點於 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 用餐與休息，為明天的行程養足體力。
-            </div>
+            <div class="event-details">早點於 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 用餐與休息。</div>
         </div>
     </div>
 
     <hr>
 
+    <!-- 9/26 (Sat) 行程 -->
     <div class="day-section">
-        <div class="day-header">09/26 (Sat)</div>
-
+        <div class="day-header">09/26 (Sat) • 當代藝術與市區黃金商圈購物</div>
+        
+        <div class="event-card transit-border">
+            <div class="event-header">
+                <div><span class="event-time">09:30–10:00</span><span class="event-title">Wynyard → MCA</span></div>
+                <span class="tag transit">Transit</span>
+            </div>
+            <div class="event-details">自 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 樓下的 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a> 搭乘地鐵（約 2 分鐘）至 Circular Quay Station <a href="https://www.google.com/maps/search/Circular+Quay+Station+Sydney">🚇</a>，出站後步行約 3 分鐘至 Museum of Contemporary Art Australia <a href="https://www.google.com/maps/search/Museum+of+Contemporary+Art+Australia">🏛️</a>。</div>
+        </div>
+        
         <div class="event-card morning-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">09:00–09:15</span>
-                    <span class="event-title">Wynyard → Circular Quay</span>
-                </div>
+                <div><span class="event-time">10:00–12:00</span><span class="event-title">Museum of Contemporary Art Australia (MCA)</span></div>
                 <span class="tag morning">Morning</span>
             </div>
-            <div class="event-details">
-                步行 2 分鐘至 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a>，搭乘火車一站抵達 Circular Quay Station <a href="https://www.google.com/maps/search/Circular+Quay+Station+Sydney">🚇</a>。
-            </div>
+            <div class="event-details">於 Museum of Contemporary Art Australia <a href="https://www.google.com/maps/search/Museum+of+Contemporary+Art+Australia">🏛️</a> 慢慢欣賞當代藝術作品。</div>
         </div>
-
-        <div class="event-card morning-border">
-            <div class="event-header">
-                <div>
-                    <span class="event-time">09:15–11:30</span>
-                    <span class="event-title">Sydney Opera House</span>
-                </div>
-                <span class="tag morning">Morning</span>
-            </div>
-            <div class="event-details">
-                沿著碼頭東側步行至 Sydney Opera House <a href="https://www.google.com/maps/search/Sydney+Opera+House">🏛️</a>，拍攝建築外觀，並可參加預約的內部導覽。
-            </div>
-        </div>
-
+        
         <div class="event-card afternoon-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">11:30–12:30</span>
-                    <span class="event-title">Circular Quay Lunch</span>
-                </div>
+                <div><span class="event-time">12:00–14:00</span><span class="event-title">Sydney Opera House & 午餐</span></div>
                 <span class="tag afternoon">Afternoon</span>
             </div>
-            <div class="event-details">
-                於環形碼頭東側周邊挑選餐廳享用午餐 <a href="https://www.google.com/maps/search/Circular+Quay+Restaurants">🍽️</a>。
-            </div>
+            <div class="event-details">沿著 Circular Quay <a href="https://www.google.com/maps/search/Circular+Quay">🚇</a> 平緩步道步行約 10 分鐘，散步至東側的 Sydney Opera House <a href="https://www.google.com/maps/search/Sydney+Opera+House">🏛️</a> 拍攝紀念照並享用午餐。</div>
         </div>
-
+        
+        <div class="event-card transit-border">
+            <div class="event-header">
+                <div><span class="event-time">14:00–14:15</span><span class="event-title">Circular Quay → Pitt Street Mall</span></div>
+                <span class="tag transit">Transit</span>
+            </div>
+            <div class="event-details">自 Circular Quay <a href="https://www.google.com/maps/search/Circular+Quay">🚇</a> 搭乘輕軌（約 7 分鐘）至 Pitt Street Mall <a href="https://www.google.com/maps/search/Pitt+Street+Mall">🛍️</a> 所在的商圈。</div>
+        </div>
+        
         <div class="event-card afternoon-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">12:30–13:00</span>
-                    <span class="event-title">Circular Quay → Art Gallery of NSW</span>
-                </div>
+                <div><span class="event-time">14:15–17:00</span><span class="event-title">Pitt Street Mall & Westfield Sydney</span></div>
                 <span class="tag afternoon">Afternoon</span>
             </div>
-            <div class="event-details">
-                自環形碼頭出發，穿越 Royal Botanic Garden <a href="https://www.google.com/maps/search/Royal+Botanic+Garden+Sydney">🌳</a> 的林蔭大道，直達新南威爾斯美術館 <a href="https://www.google.com/maps/search/Art+Gallery+of+NSW+Sydney">🏛️</a>。
-            </div>
+            <div class="event-details">在 Pitt Street Mall <a href="https://www.google.com/maps/search/Pitt+Street+Mall">🛍️</a> 與 Westfield Sydney <a href="https://www.google.com/maps/search/Westfield+Sydney">🛍️</a> 逛街採買，提早把戰利品買齊。</div>
         </div>
-
-        <div class="event-card afternoon-border">
+        
+        <div class="event-card transit-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">13:00–15:30</span>
-                    <span class="event-title">Art Gallery of NSW</span>
-                </div>
-                <span class="tag afternoon">Afternoon</span>
+                <div><span class="event-time">17:00–17:30</span><span class="event-title">返回住宿放戰利品</span></div>
+                <span class="tag transit">Transit</span>
             </div>
-            <div class="event-details">
-                參觀美術館南館的古典畫作與新建北館 (Sydney Modern Project) 的現代藝術區。
-            </div>
+            <div class="event-details">搭乘輕軌或地鐵（約 3 分鐘）回到 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 放下所有購物袋。</div>
         </div>
-
+        
         <div class="event-card evening-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">15:30–16:00</span>
-                    <span class="event-title">Art Gallery of NSW → Darling Harbour</span>
-                </div>
+                <div><span class="event-time">17:30–Night</span><span class="event-title">自由放鬆與晚餐</span></div>
                 <span class="tag evening">Evening</span>
             </div>
-            <div class="event-details">
-                自美術館步行至 St James Station <a href="https://www.google.com/maps/search/St+James+Station+Sydney">🚇</a> 搭乘火車至 Town Hall Station <a href="https://www.google.com/maps/search/Town+Hall+Station+Sydney">🚇</a>，出站後步行約 10 分🚶直達 Darling Harbour <a href="https://www.google.com/maps/search/Darling+Harbour+Sydney">🎡</a>。
-            </div>
-        </div>
-
-        <div class="event-card evening-border">
-            <div class="event-header">
-                <div>
-                    <span class="event-time">16:00–19:00</span>
-                    <span class="event-title">Darling Harbour</span>
-                </div>
-                <span class="tag evening">Evening</span>
-            </div>
-            <div class="event-details">
-                抵達達令港後，於水岸周邊散步、逛街，感受週末熱鬧氛圍並等待夜晚的煙火。
-            </div>
-        </div>
-
-        <div class="event-card evening-border">
-            <div class="event-header">
-                <div>
-                    <span class="event-time">19:00–21:00</span>
-                    <span class="event-title">Darling Harbour Dinner & Fireworks</span>
-                </div>
-                <span class="tag evening">Evening</span>
-            </div>
-            <div class="event-details">
-                挑選達令港畔的餐廳享用晚餐。約 20:30 或 21:00 於岸邊觀賞達令港週六限定煙火秀 <a href="https://www.google.com/maps/search/Darling+Harbour+Sydney">🎆</a>。觀賞完畢後步行約 10-15 分鐘🚶即可輕鬆返回 Wynyard 住宿。
-            </div>
+            <div class="event-details">傍晚保留彈性，可於 Wynyard <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a> 周邊簡單用餐或在 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 休息。</div>
         </div>
     </div>
 
     <hr>
 
+    <!-- 9/27 (Sun) 行程 -->
     <div class="day-section">
-        <div class="day-header">09/27 (Sun)</div>
-
+        <div class="day-header">09/27 (Sun) • 完美 U 型港灣慶生日</div>
+        
+        <div class="event-card transit-border">
+            <div class="event-header">
+                <div><span class="event-time">09:30–10:00</span><span class="event-title">Wynyard → Circular Quay → Rose Bay</span></div>
+                <span class="tag transit">Transit</span>
+            </div>
+            <div class="event-details">從 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 步行約 2 分鐘至 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a> 搭乘地鐵（約 2 分鐘）抵達 Circular Quay Station <a href="https://www.google.com/maps/search/Circular+Quay+Station+Sydney">🚇</a>，轉乘渡輪（約 15 分鐘）抵達 Rose Bay Wharf <a href="https://www.google.com/maps/search/Rose+Bay+Wharf">⛴️</a>。</div>
+        </div>
+        
         <div class="event-card morning-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">08:00–08:15</span>
-                    <span class="event-title">Wynyard → Central Station</span>
-                </div>
+                <div><span class="event-time">10:00–12:00</span><span class="event-title">Rose Bay 漫步與海景</span></div>
                 <span class="tag morning">Morning</span>
             </div>
-            <div class="event-details">
-                步行至 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a> 搭乘火車至 Central Station <a href="https://www.google.com/maps/search/Central+Station+Sydney">🚇</a>。
-            </div>
+            <div class="event-details">於 Lyne Park <a href="https://www.google.com/maps/search/Lyne+Park+Rose+Bay">🌳</a> 散步，近距離觀賞水上飛機起降，或沿著平緩步道欣賞海景。</div>
         </div>
-
-        <div class="event-card morning-border">
-            <div class="event-header">
-                <div>
-                    <span class="event-time">08:24–10:25</span>
-                    <span class="event-title">Central Station → Katoomba (Blue Mountains)</span>
-                </div>
-                <span class="tag morning">Morning</span>
-            </div>
-            <div class="event-details">
-                搭乘 Blue Mountains Line 往 Katoomba Station <a href="https://www.google.com/maps/search/Katoomba+Station">🚇</a>。
-            </div>
-        </div>
-
-        <div class="event-card morning-border">
-            <div class="event-header">
-                <div>
-                    <span class="event-time">10:25–10:45</span>
-                    <span class="event-title">Katoomba → Echo Point</span>
-                </div>
-                <span class="tag morning">Morning</span>
-            </div>
-            <div class="event-details">
-                出站後轉乘公車（686 路線）<a href="https://www.google.com/maps/search/Katoomba+Station">🚌</a> 前往 Echo Point 觀景台。
-            </div>
-        </div>
-
-        <div class="event-card morning-border">
-            <div class="event-header">
-                <div>
-                    <span class="event-time">10:45–12:00</span>
-                    <span class="event-title">Echo Point & Three Sisters</span>
-                </div>
-                <span class="tag morning">Morning</span>
-            </div>
-            <div class="event-details">
-                欣賞著名的 Three Sisters（三姊妹岩）<a href="https://www.google.com/maps/search/Three+Sisters+Blue+Mountains">⛰️</a> 與壯麗的藍山峽谷自然景色。
-            </div>
-        </div>
-
+        
         <div class="event-card afternoon-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">12:00–13:00</span>
-                    <span class="event-title">Blue Mountains Lunch</span>
-                </div>
+                <div><span class="event-time">12:00–14:30</span><span class="event-title">Catalina 生日午餐</span></div>
                 <span class="tag afternoon">Afternoon</span>
             </div>
-            <div class="event-details">
-                於附近的景觀餐廳或回到 Katoomba 鎮上享用午餐 <a href="https://www.google.com/maps/search/Katoomba+Restaurants">🍽️</a>。
-            </div>
+            <div class="event-details">步行約 3 分鐘抵達雪梨指標性海景餐廳 Catalina Rose Bay <a href="https://www.google.com/maps/search/Catalina+Rose+Bay">🍽️</a> 享用生日大餐。<br><br>已備註 <i>"Window seat preferred, please."</i>。</div>
         </div>
-
+        
+        <div class="event-card transit-border">
+            <div class="event-header">
+                <div><span class="event-time">14:30–15:00</span><span class="event-title">Rose Bay → Circular Quay</span></div>
+                <span class="tag transit">Transit</span>
+            </div>
+            <div class="event-details">自 Rose Bay Wharf <a href="https://www.google.com/maps/search/Rose+Bay+Wharf">⛴️</a> 搭乘渡輪（約 15 分鐘）返回 Circular Quay Station <a href="https://www.google.com/maps/search/Circular+Quay+Station+Sydney">🚇</a>。</div>
+        </div>
+        
         <div class="event-card afternoon-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">13:00–16:00</span>
-                    <span class="event-title">Scenic World</span>
-                </div>
+                <div><span class="event-time">15:00–16:30</span><span class="event-title">The Rocks 週末市集</span></div>
                 <span class="tag afternoon">Afternoon</span>
             </div>
-            <div class="event-details">
-                搭乘公車前往 Scenic World <a href="https://www.google.com/maps/search/Scenic+World+Blue+Mountains">🚠</a>，體驗全世界最陡的森林火車、高空纜車等設施。
-            </div>
+            <div class="event-details">下船後步行約 5 分鐘前往 The Rocks Sydney <a href="https://www.google.com/maps/search/The+Rocks+Sydney">🏘️</a> 逛週末限定市集，穿梭在古鎮街道中。</div>
         </div>
-
+        
         <div class="event-card evening-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">16:00–18:00</span>
-                    <span class="event-title">Katoomba → Central Station → Wynyard</span>
-                </div>
+                <div><span class="event-time">16:30–17:30</span><span class="event-title">Observatory Hill Park</span></div>
                 <span class="tag evening">Evening</span>
             </div>
-            <div class="event-details">
-                搭乘火車返回雪梨市區，並轉乘至 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a>。
-            </div>
+            <div class="event-details">從市集順著微上坡步行約 10 分鐘，抵達 Observatory Hill Park <a href="https://www.google.com/maps/search/Observatory+Hill+Park">🌳</a> 欣賞港灣大橋全景與黃昏。</div>
         </div>
-
+        
         <div class="event-card evening-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">18:00–19:30</span>
-                    <span class="event-title">晚餐 & 返回住宿</span>
-                </div>
+                <div><span class="event-time">17:30–18:30</span><span class="event-title">簡便晚餐 & 返回住宿</span></div>
                 <span class="tag evening">Evening</span>
             </div>
-            <div class="event-details">
-                於飯店附近享用晚餐，結束一日的藍山國家公園行程，回住宿休息。
-            </div>
+            <div class="event-details">買些輕食晚餐後，從公園步行約 10 分鐘返回 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 早點休息。</div>
         </div>
     </div>
 
     <hr>
 
+    <!-- 9/28 (Mon) 行程 -->
     <div class="day-section">
-        <div class="day-header">09/28 (Mon)</div>
-
+        <div class="day-header">09/28 (Mon) • 熱氣球體驗與東側文化漫步</div>
+        
         <div class="event-card transit-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">03:45–05:00</span>
-                    <span class="event-title">Novotel Sydney City Centre → Camden Valley Inn</span>
-                </div>
+                <div><span class="event-time">03:45–05:00</span><span class="event-title">Novotel Sydney City Centre → Camden Valley Inn</span></div>
                 <span class="tag transit">Transit</span>
             </div>
-            <div class="event-details">
-                自住宿步行約 2-3 分鐘🚶至 Novotel Sydney City Centre <a href="https://www.google.com/maps/search/Novotel+Sydney+City+Centre">🏨</a>，搭乘熱氣球公司的專車接送，前往 Camden Valley Inn <a href="https://www.google.com/maps/search/Camden+Valley+Inn">🎈</a> 起飛場地（確切接駁時間依主辦單位前一日通知為準）。
-            </div>
+            <div class="event-details">自 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 步行約 3 分鐘至 Novotel Sydney City Centre <a href="https://www.google.com/maps/search/Novotel+Sydney+City+Centre">🚐</a> 搭乘熱氣球專車（車程約 1 小時）前往起飛集合地。</div>
         </div>
-
+        
         <div class="event-card morning-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">05:00–09:00</span>
-                    <span class="event-title">Hot Air Balloon Flight & Breakfast</span>
-                </div>
+                <div><span class="event-time">05:00–09:00</span><span class="event-title">Hot Air Balloon Flight & Breakfast</span></div>
                 <span class="tag morning">Morning</span>
             </div>
-            <div class="event-details">
-                參與熱氣球飛行體驗，並於降落後在飯店享用慶祝早餐。
-            </div>
+            <div class="event-details">於 Camden Valley Inn <a href="https://www.google.com/maps/search/Camden+Valley+Inn">🎈</a> 參與熱氣球飛行體驗並享用慶祝早餐。</div>
         </div>
-
+        
         <div class="event-card transit-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">09:00–10:30</span>
-                    <span class="event-title">接駁回程 → Novotel Sydney City Centre</span>
-                </div>
+                <div><span class="event-time">09:00–10:30</span><span class="event-title">接駁回程 → Novotel Sydney City Centre</span></div>
                 <span class="tag transit">Transit</span>
             </div>
-            <div class="event-details">
-                搭乘熱氣球公司的回程接駁車，返回接駁點 Novotel Sydney City Centre <a href="https://www.google.com/maps/search/Novotel+Sydney+City+Centre">🏨</a>。
-            </div>
+            <div class="event-details">搭乘接駁車（車程約 1 小時）返回市區集合點 Novotel Sydney City Centre <a href="https://www.google.com/maps/search/Novotel+Sydney+City+Centre">🚐</a>。</div>
         </div>
-
+        
         <div class="event-card morning-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">10:30–12:00</span>
-                    <span class="event-title">The Rocks</span>
-                </div>
+                <div><span class="event-time">10:30–12:30</span><span class="event-title">返回住宿盥洗與打包行李</span></div>
                 <span class="tag morning">Morning</span>
             </div>
-            <div class="event-details">
-                自 Wynyard 周邊步行前往岩石區 (The Rocks) <a href="https://www.google.com/maps/search/The+Rocks+Sydney">🏘️</a>，漫步於歷史悠久的砂岩建築與古鎮街道中。
-            </div>
+            <div class="event-details">步行約 3 分鐘走回 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 盥洗、補眠，並將前天買好的戰利品安穩地打包進行李箱，辦理退房與寄放行李。</div>
         </div>
-
+        
+        <div class="event-card transit-border">
+            <div class="event-header">
+                <div><span class="event-time">12:30–13:00</span><span class="event-title">Wynyard → Hyde Park & St Mary's Cathedral</span></div>
+                <span class="tag transit">Transit</span>
+            </div>
+            <div class="event-details">自 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 樓下的 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a> 搭乘輕軌（約 3 分鐘）至 Town Hall Station <a href="https://www.google.com/maps/search/Town+Hall+Station+Sydney">🚇</a>，步行約 3 分鐘過馬路至 Hyde Park <a href="https://www.google.com/maps/search/Hyde+Park+Sydney">🌳</a> 與 St Mary's Cathedral <a href="https://www.google.com/maps/search/St+Marys+Cathedral+Sydney">⛪</a>。</div>
+        </div>
+        
         <div class="event-card afternoon-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">12:00–14:30</span>
-                    <span class="event-title">Museum of Contemporary Art Australia (MCA)</span>
-                </div>
+                <div><span class="event-time">13:00–14:30</span><span class="event-title">Hyde Park & St Mary's Cathedral</span></div>
                 <span class="tag afternoon">Afternoon</span>
             </div>
-            <div class="event-details">
-                步行前往澳洲當代藝術博物館 (MCA) <a href="https://www.google.com/maps/search/Museum+of+Contemporary+Art+Australia">🏛️</a>。可先於頂樓的 MCA Cafe 享用午餐 <a href="https://www.google.com/maps/search/MCA+Cafe+Sydney">🍽️</a>，再下樓參觀當代藝術作品。
-            </div>
+            <div class="event-details">穿過海德公園林蔭大道，入內參觀南半球最大的哥德式天主教堂。</div>
         </div>
-
+        
         <div class="event-card afternoon-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">14:30–16:30</span>
-                    <span class="event-title">Circular Quay 最後採買</span>
-                </div>
+                <div><span class="event-time">14:30–16:30</span><span class="event-title">Art Gallery of NSW & State Library</span></div>
                 <span class="tag afternoon">Afternoon</span>
             </div>
-            <div class="event-details">
-                於環形碼頭周邊及岩石區的小店進行最後的紀念品採買 <a href="https://www.google.com/maps/search/Circular+Quay">🛍️</a>。
-            </div>
+            <div class="event-details">從教堂步行約 8 分鐘至 Art Gallery of NSW Sydney <a href="https://www.google.com/maps/search/Art+Gallery+of+NSW+Sydney">🏛️</a> 參觀展區，隨後步行約 5 分鐘前往 State Library of New South Wales <a href="https://www.google.com/maps/search/State+Library+of+New+South+Wales">📚</a> 參觀米切爾閱覽室。</div>
         </div>
-
+        
+        <div class="event-card transit-border">
+            <div class="event-header">
+                <div><span class="event-time">16:30–17:00</span><span class="event-title">返回住宿拿行李</span></div>
+                <span class="tag transit">Transit</span>
+            </div>
+            <div class="event-details">從圖書館步行約 5 分鐘至 Martin Place Station <a href="https://www.google.com/maps/search/Martin+Place+Station+Sydney">🚇</a> 搭乘地鐵（約 2 分鐘）返回 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a>，步行約 2 分鐘回 Little National Hotel Sydney <a href="https://www.google.com/maps/search/Little+National+Hotel+Sydney">🏠</a> 領取行李。</div>
+        </div>
+        
         <div class="event-card evening-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">16:30–17:30</span>
-                    <span class="event-title">返回住宿拿行李</span>
-                </div>
+                <div><span class="event-time">17:00–17:40</span><span class="event-title">Wynyard → Sydney Airport (SYD)</span></div>
                 <span class="tag evening">Evening</span>
             </div>
-            <div class="event-details">
-                自環形碼頭往南步行或搭乘輕軌回到 Little National Hotel Sydney 領取行李。
-            </div>
+            <div class="event-details">自 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a> 搭乘 T8 機場線（約 25 分鐘）前往 Sydney Airport <a href="https://www.google.com/maps/search/Sydney+Airport">🛫</a>。</div>
         </div>
-
+        
         <div class="event-card evening-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">17:30–18:00</span>
-                    <span class="event-title">Wynyard → Sydney Airport (SYD)</span>
-                </div>
+                <div><span class="event-time">17:40–22:10</span><span class="event-title">Airport Check-in & Dinner</span></div>
                 <span class="tag evening">Evening</span>
             </div>
-            <div class="event-details">
-                自 Wynyard Station <a href="https://www.google.com/maps/search/Wynyard+Station+Sydney">🚇</a> 搭乘 T8 機場線（約 25 分）前往雪梨機場 <a href="https://www.google.com/maps/search/Sydney+Airport">🛫</a>。
-            </div>
+            <div class="event-details">辦理退稅、托運與出境檢查，於機場內享用晚餐與採買。</div>
         </div>
-
+        
         <div class="event-card evening-border">
             <div class="event-header">
-                <div>
-                    <span class="event-time">18:00–22:10</span>
-                    <span class="event-title">Airport Check-in & Dinner</span>
-                </div>
+                <div><span class="event-time">22:10</span><span class="event-title">Flight: SYD → TPE</span></div>
                 <span class="tag evening">Evening</span>
             </div>
-            <div class="event-details">
-                辦理退稅、托運與出境檢查，並於機場內享用晚餐與最後的免稅店採買。
-            </div>
+            <div class="event-details">搭乘 22:10 班機離開雪梨，結束美好的旅程。</div>
         </div>
-
-        <div class="event-card evening-border">
-            <div class="event-header">
-                <div>
-                    <span class="event-time">22:10</span>
-                    <span class="event-title">Flight: SYD → TPE</span>
-                </div>
-                <span class="tag evening">Evening</span>
-            </div>
-            <div class="event-details">
-                搭乘 22:10 班機離開雪梨，結束旅程。
-            </div>
-        </div>
-
     </div>
 
     <div class="footer-note">
